@@ -4,7 +4,8 @@ import MainPage from './pages/MainPage.jsx';
 
 function App() {
   return (
-    <div>
+    <div className={`flex flex-col items-center`}>
+      <h1>Hello World</h1>
       <body>
         <MainPage />
       </body>
