@@ -1,5 +1,5 @@
 import React from "react";
-import dollar from '../images/icon-dollar.svg';
+// import dollar from '../images/icon-dollar.svg';
 
 const InputLines = (props) => {
     return(
