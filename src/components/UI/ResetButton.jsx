@@ -8,7 +8,7 @@ const ResetButton = (props) => {
       onClick={props.onClick}
       disabled={props.disabled}
     >
-      Reset
+      RESET
     </button>
   );
 };

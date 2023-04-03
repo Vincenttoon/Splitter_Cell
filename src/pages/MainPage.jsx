@@ -30,11 +30,11 @@ function MainPage() {
   };
 
   const calculateTipPerPerson = (bill, tipPercentage, persons) => {
-    return (bill * (tipPercentage / 100) / persons);
+    return (bill * (tipPercentage / 100)) / persons;
   };
 
   const calculateTotalPerPerson = (bill, persons, tipPerPerson) => {
-    return (bill / persons) + tipPerPerson;
+    return bill / persons + tipPerPerson;
   };
 
   const handleResetClick = () => {
@@ -93,60 +93,62 @@ function MainPage() {
   return (
     <>
       <header className="py-4 w-full flex justify-center mt-6 mb-5">
-        <img src={logo} alt="main Splitter logo" className="self-center"/>
+        <img src={logo} alt="main Splitter logo" className="self-center" />
       </header>
 
       <main className="flex-1 p-4">
-        <div className="input-section">
-          <InputLines
-            id="bill-input"
-            label="Bill"
-            icon="dollar-icon"
-            value={billTotal}
-            error={billError}
-            onChange={handleBillChange}
-            onBlur={validateInput}
-          />
-
-          <TipChoice
-            tips={tipAmounts}
-            className="tip-class"
-            onChange={handleTipPercentageChange}
-            cleanTipPercentage={cleanTipPercentage}
-          />
-
-          <InputLines
-            id="input-input"
-            label="Number of People"
-            icon="person-icon"
-            className="IL-class"
-            value={totalPeople}
-            error={personError}
-            onChange={handlePeopleChange}
-            onBlur={validateInput}
-          />
-        </div>
-
-        <div className="return-calc-section">
-          <div className="return-calc-container">
-            <ReturnCalc
-              title="Tip Amount"
-              amount={tipPerPerson}
-              className="tip-per"
+        <div className="media-div">
+          <div className="input-section">
+            <InputLines
+              id="bill-input"
+              label="Bill"
+              icon="dollar-icon"
+              value={billTotal}
+              error={billError}
+              onChange={handleBillChange}
+              onBlur={validateInput}
             />
-            <ReturnCalc
-              id="total-per-person"
-              title="Total"
-              amount={totalPerPerson}
-              className="per-person"
+
+            <TipChoice
+              tips={tipAmounts}
+              className="tip-class"
+              onChange={handleTipPercentageChange}
+              cleanTipPercentage={cleanTipPercentage}
+            />
+
+            <InputLines
+              id="input-input"
+              label="Number of People"
+              icon="person-icon"
+              className="IL-class"
+              value={totalPeople}
+              error={personError}
+              onChange={handlePeopleChange}
+              onBlur={validateInput}
             />
           </div>
-          <ResetButton
-            disabled={resetButtonDisabled}
-            id="reset-button"
-            className="reset-button"
-            onClick={handleResetClick}
-          />
+
+          <div className="return-calc-section">
+            <div className="return-calc-container">
+              <ReturnCalc
+                title="Tip Amount"
+                amount={tipPerPerson}
+                className="tip-per"
+              />
+              <ReturnCalc
+                id="total-per-person"
+                title="Total"
+                amount={totalPerPerson}
+                className="per-person"
+              />
+            </div>
+            <ResetButton
+              disabled={resetButtonDisabled}
+              id="reset-button"
+              className="reset-button"
+              onClick={handleResetClick}
+            />
+          </div>
         </div>
       </main>
     </>

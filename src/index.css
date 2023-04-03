@@ -54,6 +54,10 @@ header{
   width: 100%;
 } */
 
+body {
+  padding-top: 40px;
+}
+
 main{
   background-color: var(--white);
   border-radius: 5%;
@@ -133,4 +137,87 @@ img.icon {
 
 .tip-input {
   width: 47%;
+}
+
+.return-calc-section {
+  background-color: var(--strong-cyan);
+  border-radius: 5px;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.return-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.return-detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+  padding-bottom: 1em;
+}
+
+.return-title {
+  color: var(--white);
+}
+
+.return-single {
+  color: var(--grey-cyan);
+}
+
+span {
+  color: var(--primary);
+}
+
+.button-reset {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 96%;
+  background-color: var(--primary);
+  margin: 0 auto;
+  height: 2em;
+  border-radius: 5px;
+  font-size: 3vh;
+  color: var(--strong-cyan);
+  padding-top: .2em;
+}
+
+@media screen and (min-width: 850px) {
+
+  .media-div {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: space-around;
+  }
+  .input-section {
+    width: 48%;
+  }
+
+  .return-calc-section {
+    width: 48%;
+  }
+
+  .tip-button {
+    width: 30%;
+  }
+
+  .tip-input {
+    width: 28%;
+    margin-top: .5em;
+    margin-left: .3em;
+    height: 8vh;
+  }
+
+  .input-text-container {
+    width: 200%;
+  }
+
+  span {
+    font-size: ;
+  }
 }
