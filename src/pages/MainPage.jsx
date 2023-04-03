@@ -92,11 +92,11 @@ function MainPage() {
 
   return (
     <>
-      <header className="main-div">
-        <img src={logo} alt="main Splitter logo" />
+      <header className="py-4 w-full flex justify-center mt-6 mb-5">
+        <img src={logo} alt="main Splitter logo" className="self-center"/>
       </header>
 
-      <main>
+      <main className="flex-1 p-4">
         <div className="input-section">
           <InputLines
             id="bill-input"
